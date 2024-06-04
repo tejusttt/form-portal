@@ -1,10 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import MaxWidthWrapper from '@/components/max-width-wrapper';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { runFireworks } from '../../../../../lib/utils';
 
+
 const ThankYou = () => {
+
+  useEffect(() => {
+    runFireworks();
+  }, []);
+
   const shareOnTwitter = () => {
     const text = encodeURIComponent("I just submitted my application! #Web3 #Application");
     const url = `https://twitter.com/intent/tweet?text=hi%20my%20name%20is%20tejas`;
